@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="isbet_pesquisa_desModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_pesquisa_usuario">
+    <Key>
+      <PropertyRef Name="id_envio_pesquisa" />
+    </Key>
+    <Property Name="id_envio_pesquisa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cd_chave_externo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_pesquisa" Type="int" Nullable="false" />
+    <Property Name="id_usuario_retorno" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_token_retorno" Type="nvarchar" MaxLength="150" />
+    <Property Name="cd_situacao" Type="nvarchar" MaxLength="1" />
+    <Property Name="dt_cadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="isbet_pesquisa_desModelStoreContainer">
+    <EntitySet Name="tbl_pesquisa_usuario" EntityType="Self.tbl_pesquisa_usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

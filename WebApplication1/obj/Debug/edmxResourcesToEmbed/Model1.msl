@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="isbet_pesquisa_desModelStoreContainer" CdmEntityContainer="isbet_pesquisa_desEntities">
+    <EntitySetMapping Name="tbl_pesquisa_usuario">
+      <EntityTypeMapping TypeName="isbet_pesquisa_desModel.tbl_pesquisa_usuario">
+        <MappingFragment StoreEntitySet="tbl_pesquisa_usuario">
+          <ScalarProperty Name="id_envio_pesquisa" ColumnName="id_envio_pesquisa" />
+          <ScalarProperty Name="cd_chave_externo" ColumnName="cd_chave_externo" />
+          <ScalarProperty Name="id_pesquisa" ColumnName="id_pesquisa" />
+          <ScalarProperty Name="id_usuario_retorno" ColumnName="id_usuario_retorno" />
+          <ScalarProperty Name="id_token_retorno" ColumnName="id_token_retorno" />
+          <ScalarProperty Name="cd_situacao" ColumnName="cd_situacao" />
+          <ScalarProperty Name="dt_cadastro" ColumnName="dt_cadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

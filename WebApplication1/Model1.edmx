@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="isbet_pesquisa_desModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_pesquisa_usuario">
+          <Key>
+            <PropertyRef Name="id_envio_pesquisa" />
+          </Key>
+          <Property Name="id_envio_pesquisa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cd_chave_externo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="id_pesquisa" Type="int" Nullable="false" />
+          <Property Name="id_usuario_retorno" Type="nvarchar" MaxLength="50" />
+          <Property Name="id_token_retorno" Type="nvarchar" MaxLength="150" />
+          <Property Name="cd_situacao" Type="nvarchar" MaxLength="1" />
+          <Property Name="dt_cadastro" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="isbet_pesquisa_desModelStoreContainer">
+          <EntitySet Name="tbl_pesquisa_usuario" EntityType="Self.tbl_pesquisa_usuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="isbet_pesquisa_desModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_pesquisa_usuario">
+          <Key>
+            <PropertyRef Name="id_envio_pesquisa" />
+          </Key>
+          <Property Name="id_envio_pesquisa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cd_chave_externo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_pesquisa" Type="Int32" Nullable="false" />
+          <Property Name="id_usuario_retorno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id_token_retorno" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="cd_situacao" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="dt_cadastro" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="isbet_pesquisa_desEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_pesquisa_usuario" EntityType="Self.tbl_pesquisa_usuario" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="isbet_pesquisa_desModelStoreContainer" CdmEntityContainer="isbet_pesquisa_desEntities">
+          <EntitySetMapping Name="tbl_pesquisa_usuario">
+            <EntityTypeMapping TypeName="isbet_pesquisa_desModel.tbl_pesquisa_usuario">
+              <MappingFragment StoreEntitySet="tbl_pesquisa_usuario">
+                <ScalarProperty Name="id_envio_pesquisa" ColumnName="id_envio_pesquisa" />
+                <ScalarProperty Name="cd_chave_externo" ColumnName="cd_chave_externo" />
+                <ScalarProperty Name="id_pesquisa" ColumnName="id_pesquisa" />
+                <ScalarProperty Name="id_usuario_retorno" ColumnName="id_usuario_retorno" />
+                <ScalarProperty Name="id_token_retorno" ColumnName="id_token_retorno" />
+                <ScalarProperty Name="cd_situacao" ColumnName="cd_situacao" />
+                <ScalarProperty Name="dt_cadastro" ColumnName="dt_cadastro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
